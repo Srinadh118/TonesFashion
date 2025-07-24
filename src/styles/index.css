@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --font-Gothic: "Special Gothic Expanded One", sans-serif;
+  --font-Oswald: "Oswald", sans-serif;
+  --font-DMSans: "DM Sans", sans-serif;
+  --clr-dark: #0e0e0e;
+  --clr-light: #bfbec3;
+  --clr-white: #f5ffff;
+  --clr-tone400: #c0c0c0;
+  --clr-tone600: #b4b4b4;
+  --clr-tone800: #626262;
+  --clr-beige400: #e9d7b8;
+  --clr-beige600: #d5ccbf;
+  --clr-accent: #f97b32;
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-Gothic);
+  color: var(--clr-dark);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: var(--clr-tone400);
+}
+
+strong {
+  color: var(--clr-tone600);
+}
+
+/* ScrollBar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-tone800);
+  outline: 1px solid var(--clr-tone800);
+  border-radius: 6px;
+}
