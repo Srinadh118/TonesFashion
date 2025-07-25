@@ -1,0 +1,175 @@
+.brand-showcase {
+  position: relative;
+  width: 100%;
+  padding-inline: var(--size-3xl);
+  background-color: var(--clr-tone600);
+}
+.brand-showcase .inner-box {
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-light);
+  border-radius: 6px;
+  padding-inline: var(--size-3xl);
+  padding-block: 10vw;
+}
+.brand-showcase .inner-box .top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.brand-showcase .inner-box .top h2 {
+  font-size: var(--size-8xl);
+  color: var(--clr-dark);
+  font-weight: 700;
+  font-style: normal;
+  width: 5ch;
+  line-height: var(--size-8xl);
+}
+.brand-showcase .inner-box .top p {
+  font-family: var(--font-DMSans);
+  font-weight: 600;
+  font-style: normal;
+  text-align: right;
+  font-size: var(--size-3xl);
+  font-weight: 300;
+  color: var(--clr-dark);
+  font-style: normal;
+  width: 27ch;
+}
+.brand-showcase .inner-box .middle {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+.brand-showcase .inner-box .middle .video-container {
+  width: 48vw;
+  height: 30vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 2vw;
+}
+.brand-showcase .inner-box .middle .video-container video {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform-origin: center center;
+}
+.brand-showcase .inner-box .bottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.brand-showcase .inner-box .bottom .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5vw;
+  width: 50%;
+}
+.brand-showcase .inner-box .bottom .left span {
+  font-family: var(--font-Oswald);
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: var(--size-xl);
+  font-weight: 700;
+  font-style: normal;
+  padding: 0.5vw;
+  padding-left: 1vw;
+  letter-spacing: 0.5vw;
+}
+.brand-showcase .inner-box .bottom .left span:first-child {
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  width: 30%;
+}
+.brand-showcase .inner-box .bottom .left span:nth-child(2) {
+  width: 60%;
+  color: var(--clr-beige600);
+  background-color: var(--clr-white);
+}
+.brand-showcase .inner-box .bottom .left span:nth-child(3) {
+  color: var(--clr-white);
+  background-color: var(--clr-beige600);
+}
+.brand-showcase .inner-box .bottom .right {
+  display: flex;
+  width: 50%;
+}
+.brand-showcase .inner-box .bottom .right h2 {
+  text-align: right;
+  font-size: var(--size-7xl);
+  color: var(--clr-dark);
+  font-weight: 700;
+  font-style: normal;
+  line-height: var(--size-7xl);
+  margin-bottom: -0.6vw;
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+/* sm */
+/* @media (min-width: 640px) {} */
+/* md */
+@media (min-width: 768px) {
+  .brand-showcase .inner-box .middle {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+  }
+  .brand-showcase .inner-box .middle .video-container {
+    width: 48vw;
+    height: 28vh;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .brand-showcase .inner-box .top h2 {
+    font-size: var(--size-7xl);
+    line-height: var(--size-7xl);
+  }
+  .brand-showcase .inner-box .top p {
+    font-size: var(--size-xl);
+    width: 27ch;
+  }
+  .brand-showcase .inner-box .middle {
+    width: 100%;
+    height: 65vh;
+  }
+  .brand-showcase .inner-box .middle .video-container {
+    width: 48vw;
+    height: 37.5vh;
+    border-radius: 2vw;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+  .brand-showcase .inner-box .top h2 {
+    font-size: var(--size-7xl);
+    line-height: var(--size-7xl);
+  }
+  .brand-showcase .inner-box .top p {
+    font-size: var(--size-xl);
+    width: 27ch;
+  }
+  .brand-showcase .inner-box .middle {
+    width: 100%;
+    height: 80vh;
+  }
+  .brand-showcase .inner-box .middle .video-container {
+    width: 48vw;
+    height: 49.9vh;
+    border-radius: 2vw;
+  }
+}
+/* 2xl */
+/* @media (min-width: 1536px) {} */

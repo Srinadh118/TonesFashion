@@ -1,0 +1,63 @@
+@mixin font-gothic($weight: 400, $style: normal) {
+  font-family: var(--font-Gothic);
+  font-weight: $weight;
+  font-style: $style;
+}
+@mixin font-oswald($weight: 400, $style: normal) {
+  font-family: var(--font-Oswald);
+  font-weight: $weight;
+  font-style: $style;
+}
+@mixin font-dmsans($weight: 400, $style: normal) {
+  font-family: var(--font-DMSans);
+  font-weight: $weight;
+  font-style: $style;
+}
+
+.expression-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark);
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 768px) {
+  .expression-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark);
+  }
+}
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+@media (min-width: 1280px) {
+  .expression-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark);
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */

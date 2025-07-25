@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import "./styles/BrandLoader.css";
 import "./styles/modern-normalize.css";
 import "./styles/index.css";
 import "./styles/utils.css";

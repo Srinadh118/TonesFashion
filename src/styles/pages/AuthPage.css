@@ -1,91 +1,97 @@
-.container {
-  max-width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
+.auth-page {
   min-height: 100vh;
+  padding: var(--size-10xl) var(--size-lg) var(--size-6xl);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-family: var(--font-DMSans);
 }
 
-.auth-wrapper {
+.auth-container {
   width: 100%;
-  max-width: 28rem;
+  max-width: 400px;
 }
 
 .auth-toggle {
   display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 2rem;
+  margin-bottom: var(--size-xl);
 }
-.auth-toggle button {
-  width: 50%;
-  padding: 1rem 0;
+
+.toggle-button {
+  flex: 1;
+  padding: var(--size-base) 0;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--size-sm);
   letter-spacing: 0.1em;
-  font-weight: bold;
-  transition: color 0.3s, border-color 0.3s;
+  background: none;
+  border: none;
+  color: var(--clr-tone600);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.auth-toggle button.active {
-  color: var(--clr-primary);
-  border-bottom: 2px solid var(--clr-accent);
-}
-.auth-toggle button.inactive {
-  color: var(--clr-secondary);
-  border-bottom: none;
+.toggle-button.active {
+  color: var(--clr-white);
+  border-color: var(--clr-accent);
 }
 
-form {
+.auth-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--size-lg);
 }
 
-.input {
+.form-input {
   width: 100%;
+  padding: var(--size-sm) var(--size-base);
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.75rem 1rem;
+  color: var(--clr-white);
+  font-size: var(--size-base);
+  font-family: var(--font-DMSans);
   outline: none;
-  color: inherit;
 }
-.input::-moz-placeholder {
-  color: var(--clr-secondary);
+.form-input::-moz-placeholder {
+  color: var(--clr-tone600);
 }
-.input::placeholder {
-  color: var(--clr-secondary);
+.form-input::placeholder {
+  color: var(--clr-tone600);
 }
-.input:focus {
+.form-input:focus {
   border-color: var(--clr-accent);
   box-shadow: 0 0 0 1px var(--clr-accent);
 }
 
-.submit-btn {
+.submit-button {
   width: 100%;
+  padding: var(--size-sm);
   background-color: var(--clr-accent);
-  color: var(--clr-background);
-  padding: 0.75rem 1rem;
-  font-weight: bold;
+  color: var(--clr-dark);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.submit-btn:hover {
+.submit-button:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
 .forgot-password {
   text-align: center;
-  font-size: 0.875rem;
-  color: var(--clr-secondary);
+  font-size: var(--size-sm);
+  color: var(--clr-tone600);
 }
 .forgot-password a {
-  color: inherit;
+  color: var(--clr-tone600);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 .forgot-password a:hover {
-  color: var(--clr-primary);
+  color: var(--clr-white);
 }

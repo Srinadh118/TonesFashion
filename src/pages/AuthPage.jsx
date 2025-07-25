@@ -24,19 +24,19 @@ const AuthPage = () => {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="container"
+      className="auth-page"
     >
-      <div className="auth-wrapper">
+      <div className="auth-container">
         <div className="auth-toggle">
           <button
             onClick={() => setIsLogin(true)}
-            className={isLogin ? "active" : "inactive"}
+            className={`toggle-button ${isLogin ? "active" : ""}`}
           >
             Login
           </button>
           <button
             onClick={() => setIsLogin(false)}
-            className={!isLogin ? "active" : "inactive"}
+            className={`toggle-button ${!isLogin ? "active" : ""}`}
           >
             Sign Up
           </button>
@@ -59,24 +59,14 @@ const AuthPage = () => {
 };
 
 const FormInput = ({ id, type, placeholder }) => (
-  <input id={id} type={type} placeholder={placeholder} className="input" />
+  <input id={id} type={type} placeholder={placeholder} className="form-input" />
 );
 
 const LoginForm = () => (
-  <form>
-    <div>
-      <label htmlFor="login-email" className="sr-only">
-        Email
-      </label>
-      <FormInput id="login-email" type="email" placeholder="Email Address" />
-    </div>
-    <div>
-      <label htmlFor="login-password" className="sr-only">
-        Password
-      </label>
-      <FormInput id="login-password" type="password" placeholder="Password" />
-    </div>
-    <button type="submit" className="submit-btn">
+  <form className="auth-form">
+    <FormInput id="login-email" type="email" placeholder="Email Address" />
+    <FormInput id="login-password" type="password" placeholder="Password" />
+    <button type="submit" className="submit-button">
       Sign In
     </button>
     <p className="forgot-password">
@@ -86,30 +76,15 @@ const LoginForm = () => (
 );
 
 const SignUpForm = () => (
-  <form>
-    <div>
-      <label htmlFor="signup-name" className="sr-only">
-        Full Name
-      </label>
-      <FormInput id="signup-name" type="text" placeholder="Full Name" />
-    </div>
-    <div>
-      <label htmlFor="signup-email" className="sr-only">
-        Email
-      </label>
-      <FormInput id="signup-email" type="email" placeholder="Email Address" />
-    </div>
-    <div>
-      <label htmlFor="signup-password" className="sr-only">
-        Password
-      </label>
-      <FormInput
-        id="signup-password"
-        type="password"
-        placeholder="Create Password"
-      />
-    </div>
-    <button type="submit" className="submit-btn">
+  <form className="auth-form">
+    <FormInput id="signup-name" type="text" placeholder="Full Name" />
+    <FormInput id="signup-email" type="email" placeholder="Email Address" />
+    <FormInput
+      id="signup-password"
+      type="password"
+      placeholder="Create Password"
+    />
+    <button type="submit" className="submit-button">
       Create Account
     </button>
   </form>

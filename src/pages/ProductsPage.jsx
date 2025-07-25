@@ -24,7 +24,16 @@ const containerVariants = {
   },
 };
 
-const categories = ["All", "T-Shirts", "Pants", "Hoodies", "Shirts"];
+const collections = [
+  "All",
+  "Oversized Tees",
+  "Daily Tees",
+  "Tones Originals",
+  "Shirts",
+  "Satin Shirts",
+  "Chinos",
+  "Accessories",
+];
 
 const ProductsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -51,15 +60,15 @@ const ProductsPage = () => {
       </header>
 
       <div className="category-buttons">
-        {categories.map((category) => (
+        {collections.map((collection) => (
           <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
+            key={collection}
+            onClick={() => setActiveCategory(collection)}
             className={`category-button ${
-              activeCategory === category ? "active" : ""
+              activeCategory === collection ? "active" : ""
             }`}
           >
-            {category}
+            {collection}
           </button>
         ))}
       </div>

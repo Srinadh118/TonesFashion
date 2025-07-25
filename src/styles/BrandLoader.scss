@@ -1,0 +1,38 @@
+.brand-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--clr-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  .logo-container {
+    margin-bottom: 1.5rem;
+    width: 200px;
+    max-width: 60vw;
+
+    svg,
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .progress-bar {
+    width: 80%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+
+    .progress {
+      height: 100%;
+      background: var(--clr-accent);
+      border-radius: 2px;
+      width: 0%;
+    }
+  }
+}

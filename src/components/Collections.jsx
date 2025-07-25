@@ -1,33 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import { images } from "../lib/images";
+
+const formatKey = (label) => label.toLowerCase().replace(/\s/g, "");
 
 const Collections = () => {
+  const [activeCollection, setActiveCollection] = useState("oversizedtees");
+
+  const currentImages = images[activeCollection] || [];
+
   return (
     <div className="collections-section">
       <div className="collections-panel">
-        <div className="collection-image">
-          <img src="/collections/oversized/o1.png" alt="" />
-          <p>
-            <span className="title">Storm Weaver Oversized Tee</span>{" "}
-            <span className="details">A clean, relaxed aesthetic</span>
-          </p>
-        </div>
-        <div className="collection-image">
-          <img src="/collections/oversized/o3.png" alt="" />
-          <p>
-            <span className="title">Predator Oversized Tee</span>{" "}
-            <span className="details">
-              keep it simple with sneakers for an easy, laid-back outfit.
-            </span>
-          </p>
-        </div>
-        <div className="collection-image">
-          <img src="/collections/oversized/o2.png" alt="" />
-          <p>
-            <span className="title">Anti-Perfect Oversized Tee</span>{" "}
-            <span className="details">Cofee Beige</span>
-          </p>
-        </div>
+        {currentImages.map((img, index) => (
+          <div className="collection-image" key={index}>
+            <img src={img.src} alt={img.title} />
+            <p>
+              <span className="title">{img.title}</span>{" "}
+              <span className="details">{img.details}</span>
+            </p>
+          </div>
+        ))}
       </div>
+
       <div className="text-panel">
         {[
           "Oversized Tees",
@@ -38,7 +32,13 @@ const Collections = () => {
           "Chinos",
           "Accessories",
         ].map((item, index) => (
-          <div key={index} className="collection-name">
+          <div
+            key={index}
+            className={`collection-name ${
+              formatKey(item) === activeCollection ? "active" : ""
+            }`}
+            onMouseEnter={() => setActiveCollection(formatKey(item))}
+          >
             {item}
           </div>
         ))}

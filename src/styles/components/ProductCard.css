@@ -4,6 +4,7 @@
 .product-card .card-link .card-image-wrapper {
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
 }
 .product-card .card-link .card-image-wrapper .card-image {
   width: 100%;
