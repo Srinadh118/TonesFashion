@@ -6,6 +6,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -85,7 +86,9 @@ const Hero = () => {
             </h2>
           </div>
           <div className="hero-call-to-action">
-            <Button className="btn light-back">DISCOVER</Button>
+            <Link to="/products">
+              <Button className="btn light-back">DISCOVER</Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -94,40 +97,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* <motion.div
-        // initial={{ x: -300 }}
-        animate={{
-          x: [-300, 300, 300, -300, -300],
-          y: [0, 0, 400, 400, 0],
-          rotate: [0, 360, 0, -360, 0],
-          transition: {
-            duration: 6,
-            delay: 2,
-            ease: "anticipate",
-            repeat: Infinity,
-            // repeatType: "reverse",
-          },
-        }}
-        className="box"
-      ></motion.div>
-      <motion.div
-        initial={{ x: +300 }}
-        animate={{
-          x: -300,
-          rotate: 180,
-          transition: {
-            duration: 3,
-            delay: 2,
-            ease: "anticipate",
-            repeat: Infinity,
-            repeatType: "reverse",
-          },
-        }}
-        className="circle"
-      ></motion.div>
-      <div>
-        <Button>Shop Now</Button>
-      </div> */
-}
