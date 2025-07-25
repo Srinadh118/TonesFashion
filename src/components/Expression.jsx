@@ -8,7 +8,7 @@ const Expression = () => {
         <div className="expression-frame">
           <CanvasExpress />
         </div>
-        {/* <div className="expression-overlay"></div> */}
+        <div className="expression-overlay"></div>
       </div>
     </div>
   );

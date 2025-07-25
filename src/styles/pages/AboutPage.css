@@ -1,0 +1,105 @@
+.about-page {
+  padding-top: var(--size-10xl);
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+.about-page .section {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--size-lg);
+  padding-block: var(--size-6xl);
+  text-align: center;
+}
+.about-page .heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.about-page .subheading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--size-5xl);
+}
+.about-page .subtext {
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-top: var(--size-md);
+  color: var(--clr-tone600);
+}
+.about-page .timeline {
+  position: relative;
+  border-left: 2px solid var(--clr-accent);
+  margin-left: var(--size-lg);
+  padding-left: var(--size-md);
+}
+.about-page .timeline-item {
+  position: relative;
+  margin-bottom: var(--size-5xl);
+  text-align: left;
+}
+.about-page .timeline-item .timeline-marker {
+  position: absolute;
+  left: -1.15rem;
+  top: 0.3rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--clr-accent);
+  border: 4px solid var(--clr-dark);
+  border-radius: 50%;
+}
+.about-page .timeline-item .year {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+.about-page .timeline-item .event-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  color: var(--clr-light);
+}
+.about-page .timeline-item .event-desc {
+  margin-top: 0.5rem;
+  color: var(--clr-tone600);
+}
+.about-page .team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-xl);
+  max-width: 1024px;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .about-page .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.about-page .team-member-card {
+  text-align: center;
+}
+.about-page .team-member-card .image-container {
+  aspect-ratio: 1/1;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  margin-bottom: var(--size-md);
+}
+.about-page .team-member-card .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-page .team-member-card .member-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.about-page .team-member-card .member-role {
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  letter-spacing: 0.15em;
+  font-size: 0.875rem;
+}

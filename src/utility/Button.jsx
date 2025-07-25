@@ -33,14 +33,14 @@ const Button = (props) => {
   };
 
   return (
-    <motion.button
+    <motion.div
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => {
         setIsHovered(false);
         setIsClicked(false);
       }}
       onClick={() => setIsClicked(!isClicked)}
-      className="btn"
+      className={props.className}
     >
       <span>{props.children}</span>
       <motion.div
@@ -63,7 +63,7 @@ const Button = (props) => {
           damping: 12,
         }}
       ></motion.div>
-    </motion.button>
+    </motion.div>
   );
 };
 

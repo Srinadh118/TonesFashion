@@ -1,5 +1,3 @@
-import brandVideo from "../assets/brand.mp4";
-
 const Brand = () => {
   return (
     <div className="brand-showcase">
@@ -14,7 +12,7 @@ const Brand = () => {
         </div>
         <div className="middle">
           <div className="video-container">
-            <video src={brandVideo} autoPlay loop muted></video>
+            <video src="/brand.mp4" autoPlay loop muted></video>
           </div>
         </div>
         <div className="bottom">

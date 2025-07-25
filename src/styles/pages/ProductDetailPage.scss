@@ -1,0 +1,120 @@
+.product-detail-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--size-10xl) var(--size-2xl) var(--size-7xl);
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-6xl);
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-image {
+  width: 100%;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .product-title {
+    font-size: var(--size-3xl);
+
+    @media (min-width: 768px) {
+      font-size: var(--size-4xl);
+    }
+
+    font-family: var(--font-Oswald);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .product-price {
+    font-size: var(--size-2xl);
+    color: var(--clr-accent);
+    margin: var(--size-lg) 0;
+  }
+
+  .product-description {
+    color: var(--clr-tone400);
+    line-height: 1.6;
+    font-family: var(--font-DMSans);
+  }
+
+  .product-section {
+    margin-top: var(--size-4xl);
+
+    .section-title {
+      text-transform: uppercase;
+      font-size: var(--size-sm);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--size-2xl);
+      font-family: var(--font-DMSans);
+    }
+
+    .product-details {
+      list-style: disc;
+      padding-left: var(--size-base);
+      color: var(--clr-tone400);
+
+      li + li {
+        margin-top: var(--size-sm);
+      }
+    }
+
+    .size-options {
+      display: flex;
+      gap: var(--size-xs);
+
+      .size-button {
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover,
+        &:focus {
+          border-color: var(--clr-accent);
+          color: var(--clr-accent);
+        }
+      }
+    }
+  }
+
+  .add-to-bag {
+    margin-top: var(--size-4xl);
+    width: 100%;
+    padding: var(--size-xl) 0;
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-xs);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: var(--clr-dark);
+    }
+  }
+}

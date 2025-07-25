@@ -17,12 +17,25 @@
   }
 }
 
+.btn.light-back {
+  --btn-light: var(--clr-light);
+  --btn-dark: var(--clr-dark);
+}
+.btn.dark-back {
+  --btn-light: var(--clr-dark);
+  --btn-dark: var(--clr-light);
+}
+.btn.theme-accent {
+  --btn-light: var(--clr-accent);
+  --btn-dark: var(--clr-dark);
+}
+
 .btn {
   overflow: hidden;
   position: relative;
-  color: var(--clr-dark);
-  background-color: var(--clr-light);
-  border: 2px solid var(--clr-dark);
+  color: var(--btn-dark);
+  background-color: var(--btn-light);
+  border: 2px solid var(--btn-dark);
   padding: 0.6rem 0.6rem 0.6rem 1.4rem;
   border-radius: 50px;
   font-size: 0.875rem;
@@ -38,7 +51,7 @@
   }
 
   &:hover {
-    color: var(--clr-light);
+    color: var(--btn-light);
   }
 
   .btn-shadow {
@@ -47,7 +60,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--clr-dark);
+    background-color: var(--btn-dark);
     border-radius: 50px;
   }
 
@@ -55,8 +68,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--btn-dark);
+    color: var(--btn-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +78,21 @@
   }
 
   &:hover .arrow {
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
+    background-color: var(--btn-light);
+    color: var(--btn-dark);
+  }
+}
+
+.brand-logo {
+  width: 6vw;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+
+    @media (max-width: 768px) {
+      width: 10vw;
+    }
   }
 }

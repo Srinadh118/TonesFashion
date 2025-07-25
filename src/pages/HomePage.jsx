@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Brand from "../components/Brand";
 import Collections from "../components/Collections";
 import Expression from "../components/Expression";
+import TeamSuccess from "../components/TeamSuccess";
 
 const HomePage = () => {
   return (
@@ -11,9 +12,7 @@ const HomePage = () => {
       <Brand />
       <Collections />
       <Expression />
-      <div className="success-section">
-        <h1>Success Section</h1>
-      </div>
+      <TeamSuccess />
     </div>
   );
 };

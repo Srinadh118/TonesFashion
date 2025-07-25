@@ -1,0 +1,91 @@
+.container {
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.auth-toggle {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+.auth-toggle button {
+  width: 50%;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  transition: color 0.3s, border-color 0.3s;
+}
+.auth-toggle button.active {
+  color: var(--clr-primary);
+  border-bottom: 2px solid var(--clr-accent);
+}
+.auth-toggle button.inactive {
+  color: var(--clr-secondary);
+  border-bottom: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1rem;
+  outline: none;
+  color: inherit;
+}
+.input::-moz-placeholder {
+  color: var(--clr-secondary);
+}
+.input::placeholder {
+  color: var(--clr-secondary);
+}
+.input:focus {
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 0 1px var(--clr-accent);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--clr-accent);
+  color: var(--clr-background);
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s;
+}
+.submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.forgot-password {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--clr-secondary);
+}
+.forgot-password a {
+  color: inherit;
+  text-decoration: none;
+}
+.forgot-password a:hover {
+  color: var(--clr-primary);
+}

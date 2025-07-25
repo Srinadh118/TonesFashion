@@ -324,8 +324,20 @@
     background-color: var(--clr-dark);
 
     .expression-video-container {
+      position: relative;
       width: 100%;
       height: 400vh;
+
+      .expression-overlay {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: #480105;
+        backdrop-filter: blur(10px);
+        opacity: 0.8;
+      }
 
       .expression-frame {
         width: 100%;
@@ -333,12 +345,6 @@
         position: sticky;
         top: 0;
         left: 0;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
 
         #expression-canvas {
           width: 100%;
@@ -346,25 +352,63 @@
         }
       }
     }
-    .expression-overlay {
-      position: sticky;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100vh;
-      background-color: red;
-    }
   }
   .success-section {
     position: relative;
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-block: var(--size-8xl);
+    padding-inline: var(--size-3xl);
+    background-color: var(--clr-tone600);
 
-    background-color: purple;
+    .text-container {
+      width: 100%;
+
+      .text-part1,
+      .text-part2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          @include font-oswald(600);
+          font-size: 9vw;
+          text-align: right;
+          letter-spacing: -0.07em;
+          mix-blend-mode: multiply;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .videos-container {
+      margin-top: var(--size-8xl);
+      position: relative;
+      width: 100%;
+      .brackets {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          @include font-oswald(800);
+          font-size: 8vw;
+          text-align: right;
+          letter-spacing: -0.07em;
+          mix-blend-mode: multiply;
+          opacity: 0.8;
+        }
+      }
+      .videos {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 /* Main section end */

@@ -1,0 +1,119 @@
+.about-page {
+  padding-top: var(--size-10xl);
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+
+  .section {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: var(--size-lg);
+    padding-block: var(--size-6xl);
+    text-align: center;
+  }
+
+  .heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  .subheading {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--size-5xl);
+  }
+
+  .subtext {
+    max-width: 60ch;
+    margin-inline: auto;
+    margin-top: var(--size-md);
+    color: var(--clr-tone600);
+  }
+
+  .timeline {
+    position: relative;
+    border-left: 2px solid var(--clr-accent);
+    margin-left: var(--size-lg);
+    padding-left: var(--size-md);
+
+    &-item {
+      position: relative;
+      margin-bottom: var(--size-5xl);
+      text-align: left;
+
+      .timeline-marker {
+        position: absolute;
+        left: -1.15rem;
+        top: 0.3rem;
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--clr-accent);
+        border: 4px solid var(--clr-dark);
+        border-radius: 50%;
+      }
+
+      .year {
+        font-size: 0.875rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--clr-accent);
+      }
+
+      .event-title {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        margin-top: 0.25rem;
+        color: var(--clr-light);
+      }
+
+      .event-desc {
+        margin-top: 0.5rem;
+        color: var(--clr-tone600);
+      }
+    }
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-xl);
+    max-width: 1024px;
+    margin-inline: auto;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .team-member-card {
+    text-align: center;
+
+    .image-container {
+      aspect-ratio: 1 / 1;
+      background-color: rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      margin-bottom: var(--size-md);
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .member-name {
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .member-role {
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      letter-spacing: 0.15em;
+      font-size: 0.875rem;
+    }
+  }
+}
