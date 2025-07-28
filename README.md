@@ -1,12 +1,47 @@
-# React + Vite
+# Tones Fashion 👗✨  
+A frontend-only animated website for a fictional fashion brand, built as part of a hackathon hosted by [Sheryians Coding School](https://sheryians.com).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔥 Project Overview
 
-Currently, two official plugins are available:
+**Tones Fashion** is a concept website designed for a fashion influencer brand inspired by **Ganesh Bugatha**, the face behind [The Fashion Verge](https://www.youtube.com/@TheFashionVerge) on YouTube.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The site showcases a bold, expressive UI focused on clean visuals and smooth animations to reflect the style and energy of a modern fashion-forward brand.
 
-## Expanding the ESLint configuration
+> 🛠️ This project was built and submitted within the hackathon deadline — just posting it a little late!
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+- **React.js** – Component-based frontend framework  
+- **Framer Motion** – Smooth layout and scroll animations  
+- **GSAP** – Advanced timeline and animation control  
+- **SCSS** – Modular, clean styling
+
+---
+
+## ✨ Features
+
+- Responsive animated homepage  
+- Product showcase section  
+- Scroll and hover effects using Framer Motion & GSAP  
+- Influencer-brand aesthetic and layout  
+- Clean, minimal code structure
+
+---
+
+## 🔗 Live Demo
+
+[Click here to view the live site](https://tonesfashion-g8ns.onrender.com) 
+
+---
+
+## 📁 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/Srinadh118/tones-fashion.git
+cd tones-fashion
+npm install
+npm start
